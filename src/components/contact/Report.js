@@ -3,7 +3,6 @@ import Status from '../../api/Status';
 
 const ReportButton = ({id, user, setClick, token, click}) => {
     const [loading, setLoading] = useState('');
-    console.log('button clicked')
     const handlePositiveReport = () => {
         const postPositiveReport = async(id) => {
             try {
@@ -18,7 +17,6 @@ const ReportButton = ({id, user, setClick, token, click}) => {
                 })
                 if(response.status===200){
                     // setUser({...user, covidStatus:true, riskSatus:true})
-                    console.log('postive handler runned')
                     setClick(!click)
                     setLoading('')
                 }
@@ -46,7 +44,6 @@ const ReportButton = ({id, user, setClick, token, click}) => {
                 // console.log(response);
                 if(response.status===200){
                     // setUser({...user, covidStatus:false})
-                    console.log('negative handler runned')
                     setClick(!click);
                     setLoading('')
                 }
