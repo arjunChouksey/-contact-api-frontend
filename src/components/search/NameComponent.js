@@ -28,7 +28,9 @@ const NameComponent = ({data, id, token}) => {
                     Authorization: 'Bearer '+ token
                 }   
             });
-            setLoading('')
+            if(response.status===200){
+                setLoading('')
+            }
 
         } catch (error) {
             setLoading('')
