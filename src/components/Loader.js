@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const Loader = ({text}) => {
-    return (
-            <div className="ui active inverted dimmer">
-                <div className="ui medium text loader">{text}</div>
-            </div>
+export const Loader = ({ text }) => {
+	return (
+		<div className="ui active inverted dimmer">
+			<div className="ui medium text loader">{text}</div>
+		</div>
+	);
+};
 
-    )
-}
-
-export default Loader;
+export const NameLoader = ({ text }) => {
+	return (
+		<div className="ui active centered inline small text loader">{text}</div>
+	);
+};
